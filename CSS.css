@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, 0.911);
+    
+}
+h1{
+    text-align: center;
+    background-color: #005992;
+    color: white;
+    
+}
+.subheading{
+    text-align: center;
+    background-color:grey ;  
+}
+label{
+    padding:0.15rem
+}
+.wrapper{
+    
+    max-height: 100%;
+    max-width: auto;
+}
+.content{
+    display:flex;
+    flex-flow: column;
+    border-radius: 1rem;
+    border-color: black;
+    border: 0.12rem;
+    border-style: solid;
+    padding:0.5rem;
+}
+.btn{
+height: 500px;
+width: auto;
+}
