@@ -294,7 +294,7 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    ></script>
 <script>
     $(function () { $('#contactForm').submit(function (e) { e.preventDefault(); const form = this; e.preventDefault(); jQuery.ajax({ url: $(this).attr('data-action'), method: this.method, data: $(this).serialize() }).then(function (res) { jQuery(form).html('<div class="text-center"><h3>Thank You!<\/h3><\/div>'); }); }); }) 
 </script>
