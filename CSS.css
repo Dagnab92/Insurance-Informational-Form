@@ -34,3 +34,12 @@ label{
 height: 500px;
 width: auto;
 }
+.user_content{
+display:flex;
+border-radius: 1rem;
+border-color: black;
+border: 0.12rem;
+border-style: solid;
+padding:0.5rem;
+margin:1rem;
+}
