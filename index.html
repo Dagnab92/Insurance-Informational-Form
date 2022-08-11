@@ -27,7 +27,8 @@
                 <input type="email" id="email" name="Email_Address" placeholder="Enter email address" required>
 
                 <label for="Date_Of_Birth">Date of Birth:</label>
-                <input type="date" id="dateOfBirth" name="Date_Of_Birth" placeholder="Enter Date of Birth here" required>
+                <input type="date" id="dateOfBirth" name="Date_Of_Birth" placeholder="Enter Date of Birth here"
+                    required>
 
                 <label for="State_Of_Birth">State of Birth:</label>
                 <input type="text" id="stateOfBirth" name="State_Of_Birth" placeholder="Enter State of Birth" required>
@@ -66,7 +67,7 @@
                 <input type="text" id="mStatues" name="Marital_Statues">
 
                 <label for="citizen">US Citizen (Y/N):</label>
-                <input type="text" id="citizen" name="Citizen"required>
+                <input type="text" id="citizen" name="Citizen" required>
 
 
             </div>
@@ -74,7 +75,7 @@
                 <h2>EMPLOYMENT INFORMATION</h2>
             </div>
             <div class="content">
-                
+
                 <label for="Current_Employer">Current Employer:</label>
                 <input type="text" id="cEmployer" name="Current_Employer">
 
@@ -107,7 +108,7 @@
                 <h2>PRIMARY BENEFICIARY INFORMATION</h2>
             </div>
             <div class="content">
-                
+
                 <label for="Primary_Beneficiary_Name">Name:</label>
                 <input type="text" id="name1" name="Primary_Beneficiary_Name" placeholder="Enter Name">
 
@@ -151,7 +152,8 @@
             </div>
             <div class="content">
 
-                <label for="Existing_life_insurance_or_annuity_policies">Existing life insurance or annuity policies (Y/N):</label>
+                <label for="Existing_life_insurance_or_annuity_policies">Existing life insurance or annuity policies
+                    (Y/N):</label>
                 <input type="text" id="existing" name="Existing_life_insurance_or_annuity_policies">
 
                 <label for="Name_of_insurance_company">Name of insurance company:</label>
@@ -197,16 +199,24 @@
                         (excluding HIV tests) or tests for any symptoms,
                         illnesses or conditions?</div>
                     <div class="user_input">
-                        <label for="recommmended_by_physician_or_other_medical_paractioner">Yes</label>
-                        <input type="checkbox" name="recommmended_by_physician_or_other_medical_paractioner" value="Yes">
+                        <label  for="recommmended_by_physician_or_other_medical_paractioner">Yes</label>
+                        <input id="show1"type="checkbox" name="recommmended_by_physician_or_other_medical_paractioner"
+                            value="Yes">
                         <label for="not_recommmended_by_physician_or_other_medical_paractioner">No</label>
-                        <input type="checkbox" name="not_recommmended_by_physician_or_other_medical_paractioner" value="No">
+                        <input type="checkbox" name="not_recommmended_by_physician_or_other_medical_paractioner"
+                            value="No">
                     </div>
                 </div>
+                <div class="more_details1">
+                    <label for="more_details1">Please provide more details, including doctor name & address:</label>
+                    <input type="textarea" id="more_details1" name="more_details1">
+                </div>
                 <div class="user_content">
-                    <div class="details">Within the last 2 years, been diagnosed, treated for, or had treatment recommended 
-                        by a physician or other medical practitioner for cancer (excluding non-melanoma related skin cancers),
-                         heart attack, stroke, alcohol or drug use?</div>
+                    <div class="details">Within the last 2 years, been diagnosed, treated for, or had treatment
+                        recommended
+                        by a physician or other medical practitioner for cancer (excluding non-melanoma related skin
+                        cancers),
+                        heart attack, stroke, alcohol or drug use?</div>
                     <div class="user_input">
                         <label for="have_been-diagnosed_withing_2_years">Yes</label>
                         <input type="checkbox" name="have_been-diagnosed_withing_2_years" value="Yes">
@@ -215,7 +225,8 @@
                     </div>
                 </div>
                 <div class="user_content">
-                    <div class="details">Within the last 2 years, been unable to work, unable to attend school or unable to 
+                    <div class="details">Within the last 2 years, been unable to work, unable to attend school or unable
+                        to
                         perform normal activities for 30 days or more?</div>
                     <div class="user_input">
                         <label for="unable_to_perform_normal_activitie">Yes</label>
@@ -225,7 +236,8 @@
                     </div>
                 </div>
                 <div class="user_content">
-                    <div class="details">Within the last 2 years, been admitted to a hospital or other medical facility for more 
+                    <div class="details">Within the last 2 years, been admitted to a hospital or other medical facility
+                        for more
                         than 2 consecutive days?</div>
                     <div class="user_input">
                         <label for="been_admitted_to_hospital">Yes</label>
@@ -248,48 +260,49 @@
                     <input type="text" name="Type_of_tobacco_used" placeholder="Enter tobacco type">
                 </div>
                 <div class="user_content">
-                        <label for="Date_of_last_tobacco_use">Date of last tobacco use:</label>
-                        <input type="date" name="Date_of_last_tobacco_use">
-                    </div>
-                </div>
-                <div class="user_content">
-                    <div class="details">In the last 5 years, have you had your license suspended or revoked?</div>
-                    <div class="user_input">
-                        <label for="license_suspended">Yes</label>
-                        <input type="checkbox" name="license_suspended" value="Yes">
-                        <label for="License_not_suspended">No</label>
-                        <input type="checkbox" name="License_not_suspended" value="No">
-                    </div>
-                </div>
-                <div class="user_content">
-                    <div class="details">Been Declined for issue, reinstatement or renewal of any type of 
-                        life or health insurance? </div>
-                    <div class="user_input">
-                        <label for="Been_Declined">Yes</label>
-                        <input type="checkbox" name="Been_Declined" value="Yes">
-                        <label for="Not_Been_Declined">No</label>
-                        <input type="checkbox" name="Not_Been_Declined" value="No">
-                    </div>
-                </div>
-                <div class="user_content">
-                    <div class="details">Had a motorcycle endorsement with your drivers license </div>
-                    <div class="user_input">
-                        <label for="otorcycle_endorsement">Yes</label>
-                        <input type="checkbox" name="motorcycle_endorsement" value="Yes">
-                        <label for="No_motorcycle_endorsement">No</label>
-                        <input type="checkbox" name="No_motorcycle_endorsement" value="No">
-                    </div>
+                    <label for="Date_of_last_tobacco_use">Date of last tobacco use:</label>
+                    <input type="date" name="Date_of_last_tobacco_use">
                 </div>
             </div>
-            <div class="submitbtn">
-                <input type="submit" id="search" value="Submit" style="height:auto; width:100%" />
+            <div class="user_content">
+                <div class="details">In the last 5 years, have you had your license suspended or revoked?</div>
+                <div class="user_input">
+                    <label for="license_suspended">Yes</label>
+                    <input type="checkbox" name="license_suspended" value="Yes">
+                    <label for="License_not_suspended">No</label>
+                    <input type="checkbox" name="License_not_suspended" value="No">
+                </div>
             </div>
+            <div class="user_content">
+                <div class="details">Been Declined for issue, reinstatement or renewal of any type of
+                    life or health insurance? </div>
+                <div class="user_input">
+                    <label for="Been_Declined">Yes</label>
+                    <input type="checkbox" name="Been_Declined" value="Yes">
+                    <label for="Not_Been_Declined">No</label>
+                    <input type="checkbox" name="Not_Been_Declined" value="No">
+                </div>
+            </div>
+            <div class="user_content">
+                <div class="details">Had a motorcycle endorsement with your drivers license </div>
+                <div class="user_input">
+                    <label for="otorcycle_endorsement">Yes</label>
+                    <input type="checkbox" name="motorcycle_endorsement" value="Yes">
+                    <label for="No_motorcycle_endorsement">No</label>
+                    <input type="checkbox" name="No_motorcycle_endorsement" value="No">
+                </div>
+            </div>
+    </div>
+    <div class="submitbtn">
+        <input type="submit" id="search" value="Submit" style="height:auto; width:100%" />
+    </div>
 
 
-        </form>
+    </form>
 
 
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
