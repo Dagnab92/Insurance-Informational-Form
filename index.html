@@ -198,16 +198,21 @@
                         practitioner to undergo diagnostic procedures
                         (excluding HIV tests) or tests for any symptoms,
                         illnesses or conditions?</div>
-                    <div class="user_input">
-                        <label  for="recommmended_by_physician_or_other_medical_paractioner">Yes</label>
-                        <input id="show1"type="checkbox" name="recommmended_by_physician_or_other_medical_paractioner"
-                            value="Yes">
-                        <label for="not_recommmended_by_physician_or_other_medical_paractioner">No</label>
-                        <input type="checkbox" name="not_recommmended_by_physician_or_other_medical_paractioner"
-                            value="No">
-                    </div>
-                </div>
-                <div class="more_details1">
+                        <div class="user_input">
+
+                            <select id="drop_down" name="referred_for_check" onchange="showHTMLDiv('more_details1', this)" >
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                            
+                            <!-- <label  for="recommmended_by_physician_or_other_medical_paractioner">Yes</label>
+                            <input id="show1" type="checkbox" name="recommmended_by_physician_or_other_medical_paractioner"
+                                value="Yes" onclick="showHTMLDiv('more_details1')">
+                            <label for="not_recommmended_by_physician_or_other_medical_paractioner">No</label>
+                            <input type="checkbox" name="not_recommmended_by_physician_or_other_medical_paractioner"
+                                value="No"> -->
+                        </div>
+                <div class="content1" id="more_details1" style="display:none">
                     <label for="more_details1">Please provide more details, including doctor name & address:</label>
                     <input type="textarea" id="more_details1" name="more_details1">
                 </div>
