@@ -151,17 +151,27 @@
                 <h2>EXISTING POLICY INFORMATION</h2>
             </div>
             <div class="content">
+                <div>
+                    <div class="details">Do you have an existing Life Insurance or Annuity Policy?</div>
+                    <div class="user_input">
 
-                <label for="Existing_life_insurance_or_annuity_policies">Existing life insurance or annuity policies
+                        <select id="drop_down" name="Existing_life_insurance_or_annuity_policies"
+                        onchange="showHTMLDiv5('numOfPolicies', this)">
+                        <option selected disabled hidded> Choose here</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <!--<label for="Existing_life_insurance_or_annuity_policies">Existing life insurance or annuity policies
                     (Y/N):</label>
-                <input type="text" id="existing" name="Existing_life_insurance_or_annuity_policies">
+                <input type="text" id="existing" name="Existing_life_insurance_or_annuity_policies">-->
+                <div class="subcontent" id="numOfPolicies" style="display:none">
+                    <input type="text" id="member" name="nOP" value="">Number of policies: (max. 5)<br />
+                    <button type="button" onclick="addFields()">Fill Details</button>
+                 </div>
 
-                <label for="Name_of_insurance_company">Name of insurance company:</label>
-                <input type="text" id="insurcom" name="Name_of_insurance_company">
-
-                <label for="Amount_of_Policy">Amount of policy:</label>
-                <input type="text" id="policy" name="Amount_of_Policy">
-
+                <div class= "content" id="container"></div>
             </div>
 
             <div class="subheading">
@@ -181,6 +191,9 @@
                 <h2>BANKING INFORMATION</h2>
             </div>
             <div class="content">
+                <label for="Financial_Institution_Name">Financial Institution Name:</label>
+                <input type="text" id="finInstName" name="Financial_Institution_Name" Placeholder=" exp. JP Morgan Chase">
+
                 <label for="Bank_Routing">Routing #:</label>
                 <input type="text" id="route" name="Bank_Routing">
 
@@ -198,59 +211,76 @@
                         practitioner to undergo diagnostic procedures
                         (excluding HIV tests) or tests for any symptoms,
                         illnesses or conditions?</div>
-                        <div class="user_input">
+                    <div class="user_input">
 
-                            <select id="drop_down" name="referred_for_check" onchange="showHTMLDiv('more_details1', this)" >
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
-                            
-                            <!-- <label  for="recommmended_by_physician_or_other_medical_paractioner">Yes</label>
-                            <input id="show1" type="checkbox" name="recommmended_by_physician_or_other_medical_paractioner"
-                                value="Yes" onclick="showHTMLDiv('more_details1')">
-                            <label for="not_recommmended_by_physician_or_other_medical_paractioner">No</label>
-                            <input type="checkbox" name="not_recommmended_by_physician_or_other_medical_paractioner"
-                                value="No"> -->
-                        </div>
-                <div class="content1" id="more_details1" style="display:none">
-                    <label for="more_details1">Please provide more details, including doctor name & address:</label>
-                    <input type="textarea" id="more_details1" name="more_details1">
+                        <select id="drop_down" name="recommendation_made_by_practioner"
+                            onchange="showHTMLDiv1('more_details1', this)">
+                            <option value="No recommendation made by practioner">No</option>
+                            <option value="Yes recommendation made by practioner">Yes</option>
+                        </select>
+                    </div>
                 </div>
+                    <!--Div that will show itself when yes is selected-->
+                    <div class="subcontent" id="more_details1" style="display:none">
+                       <p> <label for="recommmended_by_physician_or_other_medical_paractioner_more_details">Please provide
+                            more details, including doctor name & address:</label></p>
+                            <textarea placeholder="Enter the details here" id="more_details"
+                            name="recommmended_by_physician_or_other_medical_paractioner_more_details"></textarea>
+                    </div>
+                
                 <div class="user_content">
                     <div class="details">Within the last 2 years, been diagnosed, treated for, or had treatment
                         recommended
                         by a physician or other medical practitioner for cancer (excluding non-melanoma related skin
                         cancers),
                         heart attack, stroke, alcohol or drug use?</div>
-                    <div class="user_input">
-                        <label for="have_been-diagnosed_withing_2_years">Yes</label>
-                        <input type="checkbox" name="have_been-diagnosed_withing_2_years" value="Yes">
-                        <label for="have_not_have_been-diagnosed_withing_2_years">No</label>
-                        <input type="checkbox" name="have_not_have_been-diagnosed_withing_2_years" value="No">
-                    </div>
+                    <select id="drop_down" name="diagnosed_within_2 years"
+                        onchange="showHTMLDiv2('more_details2', this)">
+                        <option value="have_not_been-diagnosed_within_2_years">No</option>
+                        <option value="have_been-diagnosed_within_2_years">Yes</option>
+                    </select>
                 </div>
+                    <div class="subcontent" id="more_details2" style="display:none">
+                       <p><label for="have_been-diagnosed_within_2_years_more_details">Please provide more details, including
+                            doctor name & address:</label></p>
+                            <textarea placeholder="Enter the details here" id="more_details" name="have_been-diagnosed_within_2_years_more_details"></textarea>
+                    </div>
+                
                 <div class="user_content">
                     <div class="details">Within the last 2 years, been unable to work, unable to attend school or unable
                         to
                         perform normal activities for 30 days or more?</div>
-                    <div class="user_input">
-                        <label for="unable_to_perform_normal_activitie">Yes</label>
-                        <input type="checkbox" name="unable_to_perform_normal_activities" value="Yes">
-                        <label for="been_able_to_perform_normal_activities">No</label>
-                        <input type="checkbox" name="been_able_to_perform_normal_activities" value="No">
-                    </div>
+                        <select id="drop_down" name="diagnosed_within_2 years"
+                        onchange="showHTMLDiv3('more_details3', this)">
+                        <option value="been_able_to_perform_normal_activities">No</option>
+                        <option value="unable_to_perform_normal_activities">Yes</option>
+                    </select>
                 </div>
+                    <div class="subcontent" id="more_details3" style="display:none">
+                        <p><label for="unable_to_perform_normal_activities_more_details">Please provide more details, including
+                            doctor name & address:</label></p>
+                            <textarea placeholder="Enter the details here" id="more_details" name="unable_to_perform_normal_activities_more_details"></textarea>
+                    </div>
+                
+                
                 <div class="user_content">
                     <div class="details">Within the last 2 years, been admitted to a hospital or other medical facility
                         for more
                         than 2 consecutive days?</div>
-                    <div class="user_input">
-                        <label for="been_admitted_to_hospital">Yes</label>
-                        <input type="checkbox" name="been_admitted_to_hospital" value="Yes">
-                        <label for="have_not_been_admitted_to_hospital">No</label>
-                        <input type="checkbox" name="have_not_been_admitted_to_hospital" value="No">
+
+                        <select id="drop_down" name="diagnosed_within_2 years"
+                        onchange="showHTMLDiv4('more_details4', this)">
+                        <option value="have_not_been_admitted_to_hospital">No</option>
+                        <option value="been_admitted_to_hospital">Yes</option>
+                    </select>
+                   </div>
+                    <div class="subcontent" id="more_details4" style="display:none">
+                       <p><label for="been_admitted_to_hospital_more_details">Please provide more details, including
+                            doctor name & address:</label></p> 
+                        <textarea placeholder="Enter the details here" rows="4" cols="50" id="more_details" name="been_admitted_to_hospital_more_details"></textarea>
                     </div>
-                </div>
+                    
+                
                 <div class="user_content">
                     <div class="details">Tobacco use?</div>
                     <div class="user_input">
@@ -268,7 +298,7 @@
                     <label for="Date_of_last_tobacco_use">Date of last tobacco use:</label>
                     <input type="date" name="Date_of_last_tobacco_use">
                 </div>
-            </div>
+            
             <div class="user_content">
                 <div class="details">In the last 5 years, have you had your license suspended or revoked?</div>
                 <div class="user_input">
@@ -297,6 +327,7 @@
                     <input type="checkbox" name="No_motorcycle_endorsement" value="No">
                 </div>
             </div>
+        </div>
     </div>
     <div class="submitbtn">
         <input type="submit" id="search" value="Submit" style="height:auto; width:100%" />

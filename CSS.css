@@ -43,3 +43,13 @@ border-style: solid;
 padding:0.5rem;
 margin:1rem;
 }
+.subcontent{
+    display:flex;
+    border-radius: 1rem;
+    border-color: black;
+    border: 0.12rem;
+    border-style: solid;
+    padding:0.5rem;
+    margin:1rem;
+    flex-flow: column;
+}
